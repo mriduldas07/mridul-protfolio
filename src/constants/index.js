@@ -19,6 +19,8 @@ import {
   typescript,
   web,
 } from "../assets";
+import filterImg from "../assets/filter.jpg";
+import foreachmap from "../assets/foreachmap.jpg";
 import newportal from "../assets/new-portal.png";
 import taskmanager from "../assets/task-manager.png";
 
@@ -28,8 +30,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "blogs",
+    title: "Blogs",
   },
   {
     id: "contact",
@@ -189,6 +191,24 @@ const testimonials = [
   },
 ];
 
+const blogs = [
+  {
+    id: 1,
+    title: "Difference Between forEach and map in JavaScript",
+    description:
+      "In JavaScript, both forEach and map are used to iterate over arrays, but they serve different purposes and have distinct behaviors. The forEach method executes a provided function once for each array element and is primarily used for executing side effects, such as logging or modifying external variables, without altering the original array or returning a new one. In contrast, map also applies a function to each array element but returns a new array containing the results of these function calls, making it suitable for transforming data while preserving the original array. Unlike forEach, which returns undefined, map ensures the creation of a new array, enabling functional programming practices by maintaining immutability and allowing method chaining.",
+    image: foreachmap,
+  },
+  {
+    id: 2,
+    title:
+      "Leveraging the Power of JavaScript's Filter Method With Visual Image",
+    description:
+      "The JavaScript filter method is a powerful tool for working with arrays, enabling developers to create a new array populated with elements that pass a specified test implemented by a provided function. When filter is called, it iterates over each element of the array, applying the given function, which returns a boolean value. If the function returns true, the element is included in the new array; if false, it is excluded. This method does not mutate the original array, ensuring immutability—a core principle of functional programming. filter is particularly useful for scenarios such as extracting specific items from an array based on conditions, cleaning up datasets by removing unwanted values, or creating subsets of data for further processing. Its concise and readable syntax makes it a favorite among developers for writing clean and maintainable code.",
+    image: filterImg,
+  },
+];
+
 const projects = [
   {
     name: "News Portal",
@@ -259,4 +279,4 @@ const projects = [
   // },
 ];
 
-export { experiences, projects, services, technologies, testimonials };
+export { blogs, experiences, projects, services, technologies, testimonials };
